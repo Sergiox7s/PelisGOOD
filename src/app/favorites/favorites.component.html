@@ -1,0 +1,13 @@
+<div class="container mt-4 ">
+  <h2>Mis Favoritos</h2>
+  <div *ngIf="favorites.length; else noFavs">
+    <div class="row">
+      <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6" *ngFor="let movie of favorites">
+        <app-movie-card [movie]="movie"></app-movie-card>
+      </div>
+    </div>
+  </div>
+  <ng-template #noFavs>
+    <div class="alert alert-info">No tienes películas favoritas.</div>
+  </ng-template>
+</div>

@@ -1,0 +1,113 @@
+.movie-card {
+  transition: transform 0.3s;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #181818; /* Fondo oscuro */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid #ffd700; /* Borde dorado opcional */
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.movie-card:hover .poster .overlay {
+  opacity: 1;
+}
+
+.poster {
+  position: relative;
+  overflow: hidden;
+}
+
+.poster img {
+  width: 100%;
+  max-height: 590px;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s;
+  aspect-ratio: 2/3; /* Mantiene la proporción de la imagen */
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 767.98px) {
+  .movie-card {
+    transform: scale(0.95);
+    margin: -5px;
+  }
+  
+  .poster img {
+    max-height: 400px;
+    /* Mantenemos aspect-ratio definido arriba */
+  }
+  
+  .movie-info {
+    padding: 0.5rem;
+  }
+  
+  .movie-info .title {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .movie-info .metadata {
+    font-size: 0.8rem;
+  }
+}
+
+.poster .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.poster .rating {
+  align-self: flex-end;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.poster .rating .star {
+  color: #ffc107;
+  margin-right: 0.25rem;
+}
+
+.poster .action-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.poster .action-buttons .btn {
+  width: 100%;
+}
+
+.movie-info {
+  padding: 1rem;
+  color: #ffd700; /* Texto dorado */
+}
+
+.movie-info .title {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #ffd700; /* Título dorado */
+}
+
+.movie-info .metadata {
+  display: flex;
+  justify-content: space-between;
+  color: #fff8dc; /* Texto claro para metadatos */
+  font-size: 0.9rem;
+}

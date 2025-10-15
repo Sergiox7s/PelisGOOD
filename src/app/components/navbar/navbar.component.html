@@ -1,0 +1,83 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top mb-4">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" routerLink="/">
+      <i class="fas fa-film me-2 fa-lg text-warning"></i>
+      PelisGOOD
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+   <div class="collapse navbar-collapse animate-fade" id="navbarNav">
+  <ul class="navbar-nav align-items-center me-auto mb-2 mb-lg-0">
+  <li class="nav-item">
+    <a class="nav-link d-flex align-items-center" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+      <i class="fas fa-home me-1"></i> Inicio
+    </a>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdown" role="button"
+       data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="fas fa-list me-1"></i> Categorías
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+      <li><a class="dropdown-item" routerLink="/">Todas</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li *ngFor="let category of categories; trackBy: trackById">
+        <a class="dropdown-item" [routerLink]="['/category', category.id]">{{ category.name }}</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<div class="d-flex flex-column flex-lg-row align-items-stretch align-items-lg-center gap-2 w-100 w-lg-auto">
+  <form class="d-flex flex-grow-1 flex-lg-nowrap align-items-center ms-lg-auto" (submit)="onSearch($event)">
+    <input class="form-control me-2 search-bar" type="search" placeholder="Buscar películas..." [(ngModel)]="searchTerm" name="search">
+    <button class="btn btn-outline-secondary" type="submit">Buscar</button>
+  </form>
+
+
+  @if (!isLoggedIn) {
+    <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#loginModal">Iniciar sesión</button>
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal">Registrarse</button>
+  } @else {
+    <div class="dropdown">
+      <button class="btn btn-outline-warning dropdown-toggle w-100" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+        {{ userName }}
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+        <li><a class="dropdown-item" routerLink="/favoritos">Favoritos</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" (click)="logout()">Cerrar sesión</a></li>
+      </ul>
+    </div>
+  } 
+</div>
+
+</div>
+
+  </div>
+</nav>
+
+<!-- Modal Login -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content p-0 bg-transparent border-0 shadow-none">
+      <div class="modal-body p-0">
+        <app-login (closeModal)="closeModal()"></app-login>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Register -->
+<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content p-0 bg-transparent border-0 shadow-none">
+      <div class="modal-body p-0">
+        <app-register (closeModal)="closeModal()"></app-register>
+      </div>
+    </div>
+  </div>
+</div>
+  

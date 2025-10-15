@@ -1,0 +1,10 @@
+/* Puedes poner esto en styles.css o app.component.css */
+.app-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-area {
+  flex: 1;
+}

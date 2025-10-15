@@ -1,0 +1,74 @@
+/* Transición suave para toda la navbar */
+.navbar {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Animación de entrada al desplegar la navbar */
+.animate-fade {
+  animation: fadeIn 0.4s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Efecto hover en la marca */
+.navbar-brand:hover {
+  transform: scale(1.05);
+  color: #ffc107;
+}
+
+/* Hover para opciones del dropdown */
+.dropdown-menu a:hover {
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+/* Estilo específico para la barra de búsqueda */
+.search-bar {
+  min-width: 200px;
+  max-width: 280px;
+}
+
+/* Contenedor de búsqueda + sesión: responsive */
+.navbar-search-session {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+
+  @media (min-width: 992px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+}
+
+/* Ajuste de formulario en móvil */
+.navbar-search-session form {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-search-session .btn,
+.navbar-search-session .form-control {
+  width: 100%;
+
+  @media (min-width: 992px) {
+    width: auto;
+  }
+}
+
+/* Botón de usuario logueado: ancho fijo en móviles */
+#userDropdown {
+  white-space: nowrap;
+}

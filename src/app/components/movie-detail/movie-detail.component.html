@@ -1,0 +1,54 @@
+<div class="container" *ngIf="movie">
+  <div class="back-button ">
+    <a routerLink="/" class="btn btn-outline-secondary">
+      ← Volver al listado
+    </a>
+  </div>
+  
+  <div class="movie-header ">
+    <h1 class="movie-title">{{ movie.title }} <span class="year">({{ movie.year }})</span></h1>
+    <div class="movie-meta">
+      <span class="duration">{{ movie.duration }}</span>
+      <span class="divider">|</span>
+      <span class="rating">★ {{ movie.rating }}</span>
+      <span class="divider">|</span>
+      <span class="categories">
+        @for (category of categories; track category.id; let i = $index) {
+          {{ category.name }}{{ i < categories.length - 1 ? ', ' : '' }}
+        }
+      </span>
+    </div>
+  </div>
+
+  @if (isLoggedIn) {
+  <button class="btn btn-warning"
+          (click)="toggleFavorite()">
+    <i class="fas" [ngClass]="{ 'fa-star': isFavorite, 'fa-star-o': !isFavorite }"></i>
+    {{ isFavorite ? 'Quitar de favoritos' : 'Agregar a favoritos' }}
+  </button>
+}
+  
+  <div class="movie-content mt-2">
+    <div class="video-container">
+      <div class="video-player ratio ratio-16x9">
+        <iframe
+          [src]="safeVideoUrl"
+          frameborder="0"
+          allowfullscreen
+          class="w-100 h-100">
+        </iframe>
+      </div>
+    </div>
+    
+    <div class="movie-description mt-4">
+      <h3>Sinopsis</h3>
+      <p>{{ movie.description }}</p>
+    </div>
+  </div>
+</div>
+
+<div class="container" *ngIf="!movie">
+  <div class="alert alert-warning">
+    Película no encontrada
+  </div>
+</div>

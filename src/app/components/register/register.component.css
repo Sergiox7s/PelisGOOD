@@ -1,0 +1,87 @@
+.login-bg {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-container {
+  background: #111;
+  color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(191,161,74,0.15);
+  padding: 2.5rem 2rem 2rem 2rem;
+  max-width: 400px;
+  width: 100%;
+}
+
+.login-title {
+  color: #bfa14a;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.login-subtitle {
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  color: #bfa14a;
+  font-weight: 500;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #bfa14a;
+  border-radius: 4px;
+  background: #222;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.form-control:focus {
+  border-color: #bfa14a;
+  outline: none;
+  background: #181818;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #bfa14a;
+  border: none;
+  border-radius: 4px;
+  color: #111;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-primary:disabled {
+  background-color: #7c6a2d;
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.register-link {
+  color: #bfa14a;
+  text-decoration: underline;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.register-link:hover {
+  color: #fff;
+}

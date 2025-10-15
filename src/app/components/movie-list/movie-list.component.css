@@ -1,0 +1,60 @@
+.section-title {
+  margin-bottom: 2rem;
+  font-weight: 600;
+  color: #333;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.movie-list-container {
+  background: linear-gradient(135deg, #181818 0%, #232323 100%);
+  border-radius: 18px;
+  padding: 1.5rem 0.5rem; /* Menos padding arriba/abajo y a los lados */
+  margin-top: 2rem;
+ 
+}
+
+.gold-title {
+  color: #ffd700;
+  font-weight: 900;
+  text-shadow: 2px 2px 10px #000a;
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: 1px;
+  position: relative;
+  /* Elimina cualquier border-bottom aquí */
+}
+
+.gold-title::after {
+  content: "";
+  display: block;
+  margin: 0.5rem auto 0;
+  width: 80%;
+  max-width: 300px;
+  border-bottom: 4px solid #ffd700; /* Solo dorado */
+  border-radius: 2px;
+}
+
+.movie-list-card {
+  background: rgba(0,0,0,0.92);
+  border: 2px solid #ffd700;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(255,215,0,0.08);
+  padding: 1.2rem 1rem;
+  margin-bottom: 2rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.movie-list-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(255,215,0,0.18);
+  border-color: #fff8dc;
+}
+
+.gold-alert {
+  background: rgba(255,215,0,0.1);
+  color: #ffd700;
+  border: 1px solid #ffd700;
+  font-weight: bold;
+  text-align: center;
+}

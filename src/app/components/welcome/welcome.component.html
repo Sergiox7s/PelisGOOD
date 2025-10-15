@@ -1,0 +1,167 @@
+<div class="welcome-container">
+  <!-- Grid de películas (fondo) usando Bootstrap -->
+  <div class="movie-grid-background container-fluid">
+    <!-- Espacio adicional al inicio para permitir scroll -->
+    <div class="spacer"></div>
+    <div class="row row-cols-4 g-3 mb-3"> <!-- Primera fila: 4 columnas -->
+      <!-- Película 1 -->
+      <div class="col">
+        <div class="movie-card">
+          <img 
+            src="https://m.media-amazon.com/images/M/MV5BYTA1NTYyZDMtMjliYy00YTlhLTgzNDAtODc3ZTE5OWZkMjY1XkEyXkFqcGc@._V1_.jpg"
+            alt="Spider-Man: No Way Home"
+            class="movie-poster"
+          >
+        </div>
+      </div>
+      <!-- Película 2 -->
+      <div class="col">
+        <div class="movie-card">
+          <img 
+            src="https://img.aullidos.com/imagenes/caratulas/it-2-poster-4.jpg"
+            alt="The Batman"
+            class="movie-poster"
+          >
+        </div>
+      </div>
+      <!-- Película 3 -->
+      <div class="col">
+        <div class="movie-card">
+          <img 
+            src="https://i5.walmartimages.com/asr/deaf2e49-0946-4bae-996a-befc2d602ba1.13a380cc3fd906e3d918e67b593e138a.jpeg"
+            alt="Doctor Strange in the Multiverse of Madness"
+            class="movie-poster"
+          >
+        </div>
+      </div>
+      <!-- Película 4 -->
+      <div class="col">
+        <div class="movie-card">
+          <img 
+            src="https://www.solopress.com/blog/wp-content/uploads/2017/05/final_destination.jpg"
+            alt="Thor: Love and Thunder"
+            class="movie-poster"
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="row row-cols-4 g-3 mb-3"> <!-- Segunda fila: 4 columnas -->
+      <!-- Película 5 -->
+      <div class="col">
+        <div class="movie-card">
+          <img 
+            src="https://moviepostermexico.com/cdn/shop/products/go7RqSDLPy6sh1Jwwvg0kwntGlX.jpg?v=1593661675"
+            alt="Black Panther: Wakanda Forever"
+            class="movie-poster"
+          >
+        </div>
+      </div>
+      <!-- Película 6 -->
+      <div class="col">
+        <div class="movie-card">
+          <img 
+            src="https://www.scifinow.co.uk/wp-content/uploads/2018/02/tomb_raider_ver2_xxlg.jpg"
+            alt="Tomb Raider"
+            class="movie-poster"
+          >
+        </div>
+      </div>
+      <!-- Película 7 -->
+      <div class="col">
+        <div class="movie-card">
+          <img 
+            src="https://moviepostermexico.com/cdn/shop/products/w3XORYUDxH53iiuWRw6nqrZdwybBM0kI88F9ccHiDmw_2048x.jpg?v=1619731898"
+            alt="Avengers"
+            class="movie-poster"
+          >
+        </div>
+      </div>
+      <!-- Película 8 -->
+      <div class="col">
+        <div class="movie-card">
+          <img 
+            src="https://www.carlosvillarin.com/wp-content/uploads/cartel-corredor-laberinto-2-carlos-villarin-freelance.jpg"
+            alt="Maze Runner"
+            class="movie-poster"
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="row row-cols-4 g-3"> <!-- Tercera fila: 4 columnas -->
+      <!-- Película 9 -->
+      <div class="col">
+        <div class="movie-card">
+          <img 
+            src="https://images-cdn.ubuy.pe/65662c38c7085c2c357fa16c-the-amazing-spiderman-movie-poster.jpg"
+            alt="The Amazing Spider-Man"
+            class="movie-poster"
+          >
+        </div>
+      </div>
+      <!-- Película 10 -->
+      <div class="col">
+        <div class="movie-card">
+          <img 
+            src="https://image.tmdb.org/t/p/original/1W9ya9MZwqUQZwKEYutStiD0HVS.jpg"
+            alt="Joker"
+            class="movie-poster"
+          >
+        </div>
+      </div>
+      <!-- Película 11 -->
+      <div class="col">
+        <div class="movie-card">
+          <img 
+            src="https://m.media-amazon.com/images/I/71Yt-BtAfEL._AC_UF894,1000_QL80_.jpg"
+            alt="Inception"
+            class="movie-poster"
+          >
+        </div>
+      </div>
+      <!-- Película 12 -->
+      <div class="col">
+        <div class="movie-card">
+          <img 
+            src="https://wallpapers.com/images/hd/movie-poster-background-zd9fqn8prhr9kewl.jpg"
+            alt="Movie Background"
+            class="movie-poster"
+          >
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Sección central (en el centro) -->
+  <div class="cta-section">
+    <div class="logo-container">
+      <i class="fas fa-film logo-icon"></i>
+      <h1 class="site-name">PELIS<span class="highlight">GOOD</span></h1>
+    </div>
+    <h2 class="tagline">Disfruta de las mejores películas</h2>
+    <p class="subtitle">La experiencia cinematográfica que mereces</p>
+    
+    <div class="features">
+      <div class="feature-item">
+        <i class="fas fa-tv"></i>
+        <span>HD</span>
+      </div>
+      <div class="feature-item">
+        <i class="fas fa-closed-captioning"></i>
+        <span>Subtítulos</span>
+      </div>
+    </div>
+    
+    <div class="icons-container">
+      <i class="fas fa-film"></i>
+      <i class="fas fa-clapperboard"></i>
+      <i class="fas fa-ticket-alt"></i>
+    </div>
+    
+    <button (click)="closeModal()" class="cta-button">
+      <i class="fas fa-play-circle me-2"></i>Explora las películas
+    </button>
+  </div>
+</div>

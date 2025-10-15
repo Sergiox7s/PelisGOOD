@@ -1,0 +1,26 @@
+<div class="app-root">
+  <app-navbar></app-navbar>
+
+  <main class="content-area">
+    <router-outlet></router-outlet>
+  </main>
+
+  <!-- Modal de bienvenida -->
+  <div class="modal fade" tabindex="-1" id="welcomeModal" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-body p-0">
+          <app-welcome></app-welcome>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer mt-auto py-3 bg-dark text-white">
+    <div class="container">
+      <div class="d-flex justify-content-center">
+        <span> 2025 PeliculasApp - Todos los derechos reservados</span>
+      </div>
+    </div>
+  </footer>
+</div>
